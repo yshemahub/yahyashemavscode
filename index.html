@@ -25,7 +25,11 @@
 <header class="hero">
   <div class="wrap">
     <p class="hero-eyebrow">Portfolio</p>
-    <h1>Multimedia designer &amp; storyteller, obsessed with <em>elegant</em> solutions to any brand challenge.</h1>
+    <h1 class="hero-animated">
+      <span class="static-part" aria-hidden="true">Ask me about</span>
+      <span class="rotator" aria-hidden="true"><span id="rotator-text"></span><span class="cursor">|</span></span>
+      <span class="sr-only">Ask me about animated infographics, go-to-market strategy, AI design ops, branding a product, standout brochures, and copy that works.</span>
+    </h1>
     <p class="hero-sub">Selected work across film &amp; motion, editorial design, web &amp; UX, and game design.</p>
   </div>
 </header>
@@ -174,6 +178,62 @@
     </div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var topics = [
+      "animated infographics",
+      "go-to-market strategy",
+      "AI design ops",
+      "branding a product",
+      "standout brochures",
+      "copy that works"
+    ];
+
+    var el = document.getElementById('rotator-text');
+    if (!el) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.textContent = topics[0];
+      return;
+    }
+
+    var TYPE_SPEED = 55;
+    var DELETE_SPEED = 30;
+    var PAUSE_AFTER_TYPE = 1400;
+    var PAUSE_AFTER_DELETE = 300;
+
+    var topicIndex = 0;
+    var charIndex = 0;
+    var deleting = false;
+
+    function tick() {
+      var current = topics[topicIndex];
+
+      if (!deleting) {
+        charIndex++;
+        el.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          setTimeout(function () { deleting = true; tick(); }, PAUSE_AFTER_TYPE);
+          return;
+        }
+        setTimeout(tick, TYPE_SPEED);
+      } else {
+        charIndex--;
+        el.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          topicIndex = (topicIndex + 1) % topics.length;
+          setTimeout(tick, PAUSE_AFTER_DELETE);
+          return;
+        }
+        setTimeout(tick, DELETE_SPEED);
+      }
+    }
+
+    tick();
+  })();
+</script>
 
 </body>
 </html>
