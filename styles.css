@@ -115,23 +115,26 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid var(--line);
 }
 
-.hero-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 12.5px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
+.hero-quote {
   margin: 0 0 22px;
 }
 
-.hero-eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 22px;
-  height: 1px;
-  background: var(--accent);
-  margin-right: 10px;
-  vertical-align: middle;
+.hero-quote blockquote {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 450;
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.hero-quote figcaption {
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-60);
 }
 
 .hero h1 {
@@ -148,6 +151,15 @@ img { max-width: 100%; display: block; }
   font-style: italic;
   font-weight: 450;
   color: var(--accent);
+}
+
+.hero-role {
+  max-width: 46ch;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--ink);
+  margin: 0 0 6px;
 }
 
 .hero-sub {
