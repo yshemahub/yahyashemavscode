@@ -447,6 +447,25 @@ img { max-width: 100%; display: block; }
 
 .contact-form button:hover { opacity: 0.85; }
 
+/* ---------- About page ---------- */
+.about-content {
+  padding-bottom: 96px;
+}
+
+.about-content p {
+  max-width: 60ch;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.about-content a {
+  color: var(--accent);
+}
+
+.about-content a:hover {
+  color: var(--ink);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
