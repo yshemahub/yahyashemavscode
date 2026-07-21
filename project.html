@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="page-title">Project — Ys Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .project-hero { padding: 88px 0 40px; }
+  .project-hero .cat { font-family: var(--font-mono); font-size: 12px; letter-spacing:.1em; text-transform:uppercase; color: var(--accent); margin: 0 0 16px; }
+  .project-hero h1 { font-family: var(--font-display); font-weight: 450; font-size: clamp(30px,5vw,52px); margin: 0 0 18px; }
+  .project-hero p { max-width: 60ch; color: var(--ink-60); font-size: 17px; }
+  .project-media { padding-bottom: 72px; }
+  .project-media img { width:100%; border-radius: 4px; }
+  .back-link { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing:.06em; text-decoration:none; color: var(--ink-60); display:inline-block; margin-bottom: 24px; }
+  .back-link:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark">YS</a>
+    <div class="nav-links">
+      <a href="index.html#film">Film</a>
+      <a href="index.html#editorial">Editorial</a>
+      <a href="index.html#web">Web &amp; UX</a>
+      <a href="index.html#games">Games</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="project-hero">
+  <div class="wrap">
+    <a class="back-link" href="index.html">&larr; Back to work</a>
+    <p class="cat" id="p-cat">Category</p>
+    <h1 id="p-title">Project title</h1>
+    <p id="p-desc">Project description.</p>
+  </div>
+</header>
+
+<section class="project-media">
+  <div class="wrap">
+    <img id="p-img" src="" alt="">
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; width:100%; flex-wrap:wrap; gap:20px;">
+    <span class="footer-mark">Ys Portfolio</span>
+    <div class="footer-links">
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Fill in real write-ups as each project page gets built out.
+  const projects = {
+    "motion-reel": {
+      cat: "Film & Motion Graphics",
+      title: "Motion Graphic Reel",
+      desc: "A compilation of my visual design work.",
+      img: "https://static.wixstatic.com/media/19b5fd_e68e5e94a9194c43a0ab3e9186017f88~mv2.png"
+    },
+    "event-photography": {
+      cat: "Film & Motion Graphics",
+      title: "Event Photography",
+      desc: "Event photography collection.",
+      img: "https://static.wixstatic.com/media/19b5fd_99ac712c35994d45941026b011e1ec9b~mv2.jpg"
+    },
+    "bell-affair": {
+      cat: "Film & Motion Graphics",
+      title: "The Bell Affair",
+      desc: "An animated feature film based on a true story revealing unsung heroes.",
+      img: "https://static.wixstatic.com/media/19b5fd_37423901585c4ec9abe895f76ec25457~mv2.png"
+    },
+    "bse-magazine": {
+      cat: "Editorial & Graphic Design",
+      title: "BSE Annual Magazine",
+      desc: "Annual magazine for an academic institution.",
+      img: "https://static.wixstatic.com/media/19b5fd_92d0103e9a744482bb60e475845dbd04~mv2.jpg"
+    },
+    "articles": {
+      cat: "Editorial & Graphic Design",
+      title: "Articles",
+      desc: "A collection of news editorials.",
+      img: "https://static.wixstatic.com/media/d532b29bc0c448b29f47672da7b07613.jpg"
+    },
+    "bse-website": {
+      cat: "Web & UX Design",
+      title: "BSE Website",
+      desc: "Redesigning a higher education institution website.",
+      img: "https://static.wixstatic.com/media/19b5fd_0f4ce1c95bd642a1bf82cb60e63b70d2~mv2.png"
+    },
+    "evolve": {
+      cat: "Web & UX Design",
+      title: "Evolve",
+      desc: "Designing a website for a lifestyle sport brand. (Uploading soon)",
+      img: "https://static.wixstatic.com/media/19b5fd_b9572fff32a149bba0cb20998b1649fb~mv2.png"
+    },
+    "muco": {
+      cat: "Game Design",
+      title: "Muco",
+      desc: "A party game full of plot twists, drama, and some healthy rivalry.",
+      img: "https://static.wixstatic.com/media/19b5fd_4317c2e2abd64f95a758568bfb9b2d70~mv2.jpg"
+    },
+    "spudlandia": {
+      cat: "Game Design",
+      title: "Spudlandia",
+      desc: "An immersive educational board game. (Uploading soon)",
+      img: "https://static.wixstatic.com/media/19b5fd_ea12763b76074c2cb0266384ac446a94~mv2.png"
+    }
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const key = params.get('p');
+  const data = projects[key];
+
+  if (data) {
+    document.getElementById('page-title').textContent = data.title + " — Ys Portfolio";
+    document.getElementById('p-cat').textContent = data.cat;
+    document.getElementById('p-title').textContent = data.title;
+    document.getElementById('p-desc').textContent = data.desc;
+    document.getElementById('p-img').src = data.img;
+    document.getElementById('p-img').alt = data.title;
+  } else {
+    document.getElementById('p-cat').textContent = "Project";
+    document.getElementById('p-title').textContent = "Project not found";
+    document.getElementById('p-desc').textContent = "This project page hasn't been set up yet.";
+  }
+</script>
+
+</body>
+</html>

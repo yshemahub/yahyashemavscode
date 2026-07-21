@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Ys Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark">YS</a>
+    <div class="nav-links">
+      <a href="index.html#film">Film</a>
+      <a href="index.html#editorial">Editorial</a>
+      <a href="index.html#web">Web &amp; UX</a>
+      <a href="index.html#games">Games</a>
+      <a href="contact.html" class="nav-cta active">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="contact-hero">
+  <div class="wrap">
+    <h1>Let's work together.</h1>
+    <p class="hero-sub">Open to film &amp; motion, editorial, web/UX, and game design projects.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap contact-grid">
+
+    <ul class="contact-list">
+      <li><span class="label">Email</span><a href="mailto:hello@example.com">hello@example.com</a></li>
+      <li><span class="label">LinkedIn</span><a href="#" target="_blank" rel="noopener">linkedin.com/in/yourhandle</a></li>
+      <li><span class="label">Instagram</span><a href="#" target="_blank" rel="noopener">@yourhandle</a></li>
+      <li><span class="label">Based in</span><span>Omaha, NE</span></li>
+    </ul>
+
+    <form class="contact-form" onsubmit="return handleSubmit(event)">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit">Send message</button>
+    </form>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; width:100%; flex-wrap:wrap; gap:20px;">
+    <span class="footer-mark">Ys Portfolio</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Placeholder handler — replace with Formspree, Netlify Forms, or a mailto fallback.
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert("This form isn't wired up to send messages yet. Connect it to a service like Formspree or Netlify Forms, or swap it for a mailto link.");
+    return false;
+  }
+</script>
+
+</body>
+</html>
