@@ -13,10 +13,15 @@
   <div class="wrap">
     <a href="index.html" class="nav-mark">YS</a>
     <div class="nav-links">
-      <a href="#film">Film</a>
-      <a href="#editorial">Editorial</a>
-      <a href="#web">Web &amp; UX</a>
-      <a href="#games">Games</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Work <span class="nav-dropdown-caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="#film">Film</a>
+          <a href="#editorial">Editorial</a>
+          <a href="#web">Web &amp; UX</a>
+          <a href="#games">Games</a>
+        </div>
+      </div>
       <a href="about.html">About</a>
       <a href="contact.html" class="nav-cta">Contact</a>
     </div>
@@ -202,6 +207,8 @@
     </div>
   </div>
 </footer>
+
+<script src="assets/js/nav-dropdown.js"></script>
 
 <script>
   (function () {

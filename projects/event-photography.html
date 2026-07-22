@@ -12,10 +12,15 @@
   <div class="wrap">
     <a href="../index.html" class="nav-mark">YS</a>
     <div class="nav-links">
-      <a href="../index.html#film">Film</a>
-      <a href="../index.html#editorial">Editorial</a>
-      <a href="../index.html#web">Web &amp; UX</a>
-      <a href="../index.html#games">Games</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Work <span class="nav-dropdown-caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="../index.html#film">Film</a>
+          <a href="../index.html#editorial">Editorial</a>
+          <a href="../index.html#web">Web &amp; UX</a>
+          <a href="../index.html#games">Games</a>
+        </div>
+      </div>
       <a href="../about.html">About</a>
       <a href="../contact.html" class="nav-cta">Contact</a>
     </div>
@@ -31,28 +36,25 @@
   </div>
 </header>
 
-<section class="project-media">
+<section class="project-block">
   <div class="wrap">
-    <div class="media-placeholder">
-      <span>Image or video — assets/projects/event-photography/01-hero.jpg (or .mp4)</span>
+    <h2 class="project-block-title">About</h2>
+    <div class="project-subblock">
+      <p>A collection of photos captured at events, summits, and conferences.</p>
     </div>
-    <div class="project-gallery-grid">
-      <div class="media-placeholder">
-        <span>Image or video — assets/projects/event-photography/02.jpg</span>
-      </div>
-      <div class="media-placeholder">
-        <span>Image or video — assets/projects/event-photography/03.jpg</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="project-details">
-  <div class="wrap">
     <ul class="contact-list">
-      <li><span class="label">Role</span><span>Add your role(s)</span></li>
-      <li><span class="label">Tools</span><span>Add tools used</span></li>
+      <li><span class="label">Role</span><span>Photographer</span></li>
+      <li><span class="label">Tools</span><span>Adobe Lightroom, Camera</span></li>
     </ul>
+    <div class="project-subblock">
+      <div class="project-gallery-grid">
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/event-photography/01.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/event-photography/02.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/event-photography/03.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/event-photography/04.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/event-photography/05.jpg</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -65,6 +67,9 @@
     </div>
   </div>
 </footer>
+
+<script src="../assets/js/nav-dropdown.js"></script>
+<script src="../assets/js/lightbox.js"></script>
 
 </body>
 </html>
