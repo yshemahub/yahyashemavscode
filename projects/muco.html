@@ -12,10 +12,15 @@
   <div class="wrap">
     <a href="../index.html" class="nav-mark">YS</a>
     <div class="nav-links">
-      <a href="../index.html#film">Film</a>
-      <a href="../index.html#editorial">Editorial</a>
-      <a href="../index.html#web">Web &amp; UX</a>
-      <a href="../index.html#games">Games</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Work <span class="nav-dropdown-caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="../index.html#film">Film</a>
+          <a href="../index.html#editorial">Editorial</a>
+          <a href="../index.html#web">Web &amp; UX</a>
+          <a href="../index.html#games">Games</a>
+        </div>
+      </div>
       <a href="../about.html">About</a>
       <a href="../contact.html" class="nav-cta">Contact</a>
     </div>
@@ -33,8 +38,16 @@
 
 <section class="project-media">
   <div class="wrap">
-    <div class="media-placeholder">
-      <span>Image or video — assets/projects/muco/01-hero.jpg (or .mp4)</span>
+    <div class="media-placeholder js-lightbox">
+      <span>Image — assets/projects/muco/hero-01.jpg</span>
+    </div>
+    <div class="project-gallery-grid">
+      <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hero-02.jpg</span></div>
+      <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hero-03.jpg</span></div>
+      <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hero-04.jpg</span></div>
+      <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hero-05.jpg</span></div>
+      <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hero-06.jpg</span></div>
+      <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hero-07.jpg</span></div>
     </div>
   </div>
 </section>
@@ -43,7 +56,8 @@
   <div class="wrap">
     <h2 class="project-block-title">About</h2>
     <div class="project-subblock">
-      <p>Muco is a party game designed to bring people together while raising awareness for endangered species. The Silverback Edition spotlights Rwanda's endangered mountain gorillas and weaves in Kinyarwanda language elements throughout.</p>
+      <p>Muco is a card game that was designed to help bring loved ones together and, at the same time, help advocate for endangered species.</p>
+      <p>The Silverback Edition places primary focus on the endangered Silverback Gorillas in Rwanda, with integrated Kinyarwanda language elements.</p>
     </div>
     <ul class="contact-list">
       <li><span class="label">Role</span><span>Creative Director, Game Designer, Visual Designer</span></li>
@@ -62,7 +76,8 @@
   <div class="wrap">
     <h2 class="project-block-title">Game Summary</h2>
     <div class="project-subblock">
-      <p>Players receive animal families and cards, using playing cards to grow and protect their collections. The first player to collect five authentic Muco cards wins.</p>
+      <p>Muco is a party game full of plot twists, drama, and some healthy rivalry.</p>
+      <p>Each player is given an animal family (Muco) and playing cards. The first player to get 5 real Mucos in their family wins it all!</p>
     </div>
   </div>
 </section>
@@ -71,7 +86,7 @@
   <div class="wrap">
     <h2 class="project-block-title">Game in Action</h2>
     <div class="project-subblock">
-      <div class="media-placeholder">
+      <div class="media-placeholder js-lightbox">
         <span>Video — assets/projects/muco/game-in-action.mp4 (or a YouTube link)</span>
       </div>
     </div>
@@ -84,18 +99,19 @@
 
     <div class="project-subblock">
       <h3 class="project-subblock-title">Game-Mechanic Design</h3>
-      <p>The design philosophy centered on community, cultural celebration, and wildlife conservation. Mechanics were selected through playtesting for progressive difficulty, surprise elements, achievable goals, and sensory engagement.</p>
+      <p>The objective was to craft a game that brings people together, celebrates cultural diversity, and champions wildlife conservation.</p>
+      <p>Mechanics were selected through playtesting for progressive difficulty, surprise and delight, achievable goals, and sensory engagement.</p>
     </div>
 
     <div class="project-subblock">
       <h3 class="project-subblock-title">Prototype</h3>
-      <p>Iterative testing used anonymous Google-survey feedback across multiple rounds of refinement.</p>
+      <p>Game testers were provided with Google surveys for anonymous feedback collection, followed by iterative refinement and further rounds of testing.</p>
       <div class="project-gallery-grid">
-        <div class="media-placeholder"><span>Image — assets/projects/muco/prototype-01.jpg</span></div>
-        <div class="media-placeholder"><span>Image — assets/projects/muco/prototype-02.jpg</span></div>
-        <div class="media-placeholder"><span>Image — assets/projects/muco/prototype-03.jpg</span></div>
-        <div class="media-placeholder"><span>Image — assets/projects/muco/prototype-04.jpg</span></div>
-        <div class="media-placeholder"><span>Image — assets/projects/muco/prototype-05.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/prototype-01.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/prototype-02.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/prototype-03.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/prototype-04.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/prototype-05.jpg</span></div>
       </div>
     </div>
   </div>
@@ -107,29 +123,49 @@
 
     <div class="project-subblock">
       <h3 class="project-subblock-title">Concept Art / Lo-Fi Design</h3>
-      <p>The goal was vibrant, playful visuals featuring silverback gorillas prominently, incorporating Rwandan cultural characters from modern and folk stories.</p>
-      <div class="media-placeholder media-placeholder--summary">
-        <span>12 images — assets/projects/muco/lo-fi-design-01.jpg … lo-fi-design-12.jpg</span>
+      <p>The objective was to create visual designs that emanate playfulness and vibrancy, prominently showcase the silverback gorilla, and introduce characters inspired by modern and folk stories from Rwanda.</p>
+      <div class="project-gallery-grid">
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-01.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-02.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-03.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-04.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-05.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-06.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-07.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-08.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-09.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-10.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-11.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/lo-fi-design-12.jpg</span></div>
       </div>
     </div>
 
     <div class="project-subblock">
       <h3 class="project-subblock-title">Hi-Fi Design</h3>
-      <p>Selected sketches were refined into high-fidelity illustrations for integration across cards, packaging, and the rulebook.</p>
-      <div class="media-placeholder media-placeholder--summary">
-        <span>10 images — assets/projects/muco/hi-fi-design-01.jpg … hi-fi-design-10.jpg</span>
+      <p>After selecting a few preferred Lo-Fi sketches, we proceeded to refine them into high-fidelity illustrations for integration across cards, packaging, and the rulebook.</p>
+      <div class="project-gallery-grid">
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hi-fi-design-01.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hi-fi-design-02.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hi-fi-design-03.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hi-fi-design-04.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hi-fi-design-05.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hi-fi-design-06.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hi-fi-design-07.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hi-fi-design-08.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hi-fi-design-09.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/hi-fi-design-10.jpg</span></div>
       </div>
     </div>
 
     <div class="project-subblock">
       <h3 class="project-subblock-title">Information Architecture</h3>
-      <p>Architectural principles were applied to integrate text, illustration, and icons into the final product.</p>
+      <p>Various information architecture principles were applied to seamlessly integrate text, illustrations, and icons into the final product.</p>
       <div class="project-gallery-grid">
-        <div class="media-placeholder"><span>Image — assets/projects/muco/ia-01.jpg</span></div>
-        <div class="media-placeholder"><span>Image — assets/projects/muco/ia-02.jpg</span></div>
-        <div class="media-placeholder"><span>Image — assets/projects/muco/ia-03.jpg</span></div>
-        <div class="media-placeholder"><span>Image — assets/projects/muco/ia-04.jpg</span></div>
-        <div class="media-placeholder"><span>Image — assets/projects/muco/ia-05.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/ia-01.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/ia-02.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/ia-03.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/ia-04.jpg</span></div>
+        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/muco/ia-05.jpg</span></div>
       </div>
     </div>
   </div>
@@ -139,8 +175,8 @@
   <div class="wrap">
     <h2 class="project-block-title">Product Marketing</h2>
     <div class="project-subblock">
-      <p>Short marketing videos were created to share the product's story with customers.</p>
-      <div class="media-placeholder">
+      <p>To share our story and product with our customers, we created various short marketing videos.</p>
+      <div class="media-placeholder js-lightbox">
         <span>Video — assets/projects/muco/marketing-01.mp4</span>
       </div>
     </div>
@@ -156,6 +192,9 @@
     </div>
   </div>
 </footer>
+
+<script src="../assets/js/nav-dropdown.js"></script>
+<script src="../assets/js/lightbox.js"></script>
 
 </body>
 </html>
