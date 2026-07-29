@@ -18,8 +18,8 @@
     lastTrigger = trigger;
     content.innerHTML = '';
 
-    var img = trigger.querySelector('img');
-    var video = trigger.querySelector('video');
+    var img = trigger.querySelector('img.is-active') || trigger.querySelector('img');
+    var video = trigger.querySelector('video.is-active') || trigger.querySelector('video');
     var span = trigger.querySelector('span');
 
     if (img) {

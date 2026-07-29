@@ -38,8 +38,8 @@
 
 <section class="project-media">
   <div class="wrap">
-    <div class="media-placeholder js-lightbox">
-      <span>Image or video — assets/projects/bell-affair/01-hero.jpg (or .mp4)</span>
+    <div class="project-video">
+      <iframe src="https://player.vimeo.com/video/612926354" title="The Bell Affair" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen loading="lazy"></iframe>
     </div>
   </div>
 </section>
@@ -75,21 +75,26 @@
     <div class="project-subblock">
       <h3 class="project-subblock-title">3D Models</h3>
       <p>3D model samples from The Bell Affair.</p>
-      <div class="project-gallery-grid">
-        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/bell-affair/3d-model-01.jpg</span></div>
-        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/bell-affair/3d-model-02.jpg</span></div>
-        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/bell-affair/3d-model-03.jpg</span></div>
-        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/bell-affair/3d-model-04.jpg</span></div>
+      <div class="media-rotator js-lightbox">
+        <img src="../assets/projects/bell-affair/3d-model-01.png" alt="The Bell Affair 3D model" class="is-active">
+        <img src="../assets/projects/bell-affair/3d-model-02.png" alt="The Bell Affair 3D model">
+        <img src="../assets/projects/bell-affair/3d-model-03.png" alt="The Bell Affair 3D model">
+        <img src="../assets/projects/bell-affair/3d-model-04.png" alt="The Bell Affair 3D model">
+        <img src="../assets/projects/bell-affair/3d-model-05.png" alt="The Bell Affair 3D model">
+        <button type="button" class="rotator-nav rotator-prev" aria-label="Previous image">&#8249;</button>
+        <button type="button" class="rotator-nav rotator-next" aria-label="Next image">&#8250;</button>
       </div>
     </div>
 
     <div class="project-subblock">
       <h3 class="project-subblock-title">Animation</h3>
       <p>Animation samples from The Bell Affair.</p>
-      <div class="project-gallery-grid">
-        <div class="media-placeholder js-lightbox"><span>Video — assets/projects/bell-affair/animation-01.mp4</span></div>
-        <div class="media-placeholder js-lightbox"><span>Video — assets/projects/bell-affair/animation-02.mp4</span></div>
-        <div class="media-placeholder js-lightbox"><span>Video — assets/projects/bell-affair/animation-03.mp4</span></div>
+      <div class="media-rotator js-lightbox">
+        <video src="../assets/projects/bell-affair/animation-01.mp4" class="is-active" muted playsinline loop preload="auto"></video>
+        <video src="../assets/projects/bell-affair/animation-02.mp4" muted playsinline loop preload="auto"></video>
+        <video src="../assets/projects/bell-affair/animation-03.mp4" muted playsinline loop preload="auto"></video>
+        <button type="button" class="rotator-nav rotator-prev" aria-label="Previous video">&#8249;</button>
+        <button type="button" class="rotator-nav rotator-next" aria-label="Next video">&#8250;</button>
       </div>
     </div>
   </div>
@@ -120,33 +125,37 @@
     <div class="project-subblock">
       <h3 class="project-subblock-title">Conducting Research</h3>
       <p>A select few images from our research.</p>
-      <div class="project-gallery-grid">
-        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/bell-affair/research-01.jpg</span></div>
-        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/bell-affair/research-02.jpg</span></div>
-        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/bell-affair/research-03.jpg</span></div>
-        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/bell-affair/research-04.jpg</span></div>
-        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/bell-affair/research-05.jpg</span></div>
-        <div class="media-placeholder js-lightbox"><span>Image — assets/projects/bell-affair/research-06.jpg</span></div>
+      <div class="media-rotator js-lightbox">
+        <img src="../assets/projects/bell-affair/research-01.avif" alt="The Bell Affair research" class="is-active">
+        <img src="../assets/projects/bell-affair/research-02.avif" alt="The Bell Affair research">
+        <img src="../assets/projects/bell-affair/research-03.avif" alt="The Bell Affair research">
+        <img src="../assets/projects/bell-affair/research-04.avif" alt="The Bell Affair research">
+        <img src="../assets/projects/bell-affair/research-05.avif" alt="The Bell Affair research">
+        <img src="../assets/projects/bell-affair/research-06.avif" alt="The Bell Affair research">
+        <button type="button" class="rotator-nav rotator-prev" aria-label="Previous image">&#8249;</button>
+        <button type="button" class="rotator-nav rotator-next" aria-label="Next image">&#8250;</button>
       </div>
     </div>
 
-    <div class="project-subblock">
-      <h3 class="project-subblock-title">Key Insights</h3>
-      <ol class="plain-list">
-        <li><strong>T-pose to A-pose transfer issues.</strong> Direct motion transfer from Rokoko's T-pose rig to Daz MetaHuman's A-pose rig creates significant error rates due to the pose difference.</li>
-        <li><strong>Selective workflow efficiency.</strong> Motion capture improved efficiency in specific animation shots, though the benefit diminished in sequences with minimal full-body movement.</li>
-        <li><strong>Unreal Engine performance.</strong> Unreal Engine and its MetaHuman characters performed exceptionally well — better than alternatives for diverse character creation, photorealistic output, comprehensive filmmaking capability, and community support.</li>
-        <li><strong>Motion capture advantages.</strong> The technology proved most beneficial for full-body movement sequences.</li>
-      </ol>
-    </div>
+    <div class="project-two-col">
+      <div class="project-subblock">
+        <h3 class="project-subblock-title">Key Insights</h3>
+        <ol class="plain-list">
+          <li><strong>T-pose to A-pose transfer issues.</strong> Direct motion transfer from Rokoko's T-pose rig to Daz MetaHuman's A-pose rig creates significant error rates due to the pose difference.</li>
+          <li><strong>Selective workflow efficiency.</strong> Motion capture improved efficiency in specific animation shots, though the benefit diminished in sequences with minimal full-body movement.</li>
+          <li><strong>Unreal Engine performance.</strong> Unreal Engine and its MetaHuman characters performed exceptionally well — better than alternatives for diverse character creation, photorealistic output, comprehensive filmmaking capability, and community support.</li>
+          <li><strong>Motion capture advantages.</strong> The technology proved most beneficial for full-body movement sequences.</li>
+        </ol>
+      </div>
 
-    <div class="project-subblock">
-      <h3 class="project-subblock-title">Recommendations</h3>
-      <ol class="plain-list">
-        <li><strong>Rig pose adjustment.</strong> Use Blender or Maya to convert Daz rigs to T-pose before retargeting — this significantly improves transfer accuracy.</li>
-        <li><strong>Pre-set animation libraries.</strong> Save animations in Daz Studio preset format for convenient reuse, particularly valuable since most Bell Affair scenes didn't require motion capture.</li>
-        <li><strong>Unreal Engine integration.</strong> Use Unreal Engine MetaHumans with motion capture for future projects, given the feature diversity, minimal error rates, free licensing, and strong community resources.</li>
-      </ol>
+      <div class="project-subblock">
+        <h3 class="project-subblock-title">Recommendations</h3>
+        <ol class="plain-list">
+          <li><strong>Rig pose adjustment.</strong> Use Blender or Maya to convert Daz rigs to T-pose before retargeting — this significantly improves transfer accuracy.</li>
+          <li><strong>Pre-set animation libraries.</strong> Save animations in Daz Studio preset format for convenient reuse, particularly valuable since most Bell Affair scenes didn't require motion capture.</li>
+          <li><strong>Unreal Engine integration.</strong> Use Unreal Engine MetaHumans with motion capture for future projects, given the feature diversity, minimal error rates, free licensing, and strong community resources.</li>
+        </ol>
+      </div>
     </div>
   </div>
 </section>
@@ -163,6 +172,7 @@
 
 <script src="../assets/js/nav-dropdown.js"></script>
 <script src="../assets/js/lightbox.js"></script>
+<script src="../assets/js/media-rotator.js"></script>
 
 </body>
 </html>
