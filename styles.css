@@ -756,6 +756,27 @@ img { max-width: 100%; display: block; }
   filter: brightness(0);
 }
 
+.project-recognition {
+  margin-top: 32px;
+}
+
+.project-recognition .trusted-label {
+  margin-bottom: 16px;
+}
+
+.project-recognition-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 32px;
+}
+
+.project-recognition-row .recognition-item {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 200px;
+}
+
 .project-block {
   padding: 72px 0;
   border-bottom: 1px solid var(--line);
