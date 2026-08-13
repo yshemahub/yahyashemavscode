@@ -1,6 +1,6 @@
 /* ===========================================================
    Ys Portfolio — design tokens
-   Display: Fraunces (characterful serif, used large + restrained)
+   Display: Public Sans (modern minimalist grotesk, weight-driven hierarchy — no italics, no bold by default)
    Body/UI: Inter
    Utility (labels/eyebrows): IBM Plex Mono
    Palette:
@@ -12,7 +12,7 @@
      --accent-2:#B8472A  (rust — sparingly, hover/active only)
    =========================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
   --paper: #F7F5F1;
@@ -22,7 +22,7 @@
   --accent: #2E3A6E;
   --accent-2: #B8472A;
 
-  --font-display: 'Fraunces', serif;
+  --font-display: 'Public Sans', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
@@ -72,9 +72,9 @@ img { max-width: 100%; display: block; }
 
 .nav-mark {
   font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
   text-decoration: none;
 }
 
@@ -185,25 +185,24 @@ img { max-width: 100%; display: block; }
 .hero-eyebrow {
   margin: 0 0 22px;
   font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 450;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 16px;
   color: var(--accent);
 }
 
 .hero h1 {
   font-family: var(--font-display);
-  font-weight: 450;
-  font-size: clamp(34px, 5.4vw, 64px);
-  line-height: 1.08;
-  letter-spacing: -0.01em;
+  font-weight: 500;
+  font-size: clamp(28px, 4.4vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
   margin: 0 0 28px;
   max-width: 20ch;
 }
 
 .hero h1 em {
-  font-style: italic;
-  font-weight: 450;
+  font-style: normal;
+  font-weight: 500;
   color: var(--accent);
 }
 
@@ -225,9 +224,10 @@ img { max-width: 100%; display: block; }
 
 .hero-animated {
   font-family: var(--font-display);
-  font-weight: 450;
-  font-size: clamp(34px, 5.4vw, 64px);
-  line-height: 1.15;
+  font-weight: 500;
+  font-size: clamp(28px, 4.4vw, 46px);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
   margin: 0 0 28px;
 }
 
@@ -236,7 +236,7 @@ img { max-width: 100%; display: block; }
 .hero-animated .rotator {
   display: block;
   color: var(--accent);
-  font-style: italic;
+  font-style: normal;
   min-height: 1.2em;
 }
 
@@ -329,9 +329,9 @@ img { max-width: 100%; display: block; }
 
 .category-head h2 {
   font-family: var(--font-display);
-  font-weight: 450;
-  font-style: italic;
-  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-size: clamp(19px, 2.4vw, 24px);
   margin: 0;
 }
 
@@ -389,8 +389,9 @@ img { max-width: 100%; display: block; }
 
 .card h3 {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  font-size: 17px;
   margin: 0 0 6px;
 }
 
@@ -431,8 +432,8 @@ img { max-width: 100%; display: block; }
 
 .footer-mark {
   font-family: var(--font-display);
-  font-style: italic;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 14px;
   color: var(--ink-60);
 }
 
@@ -459,9 +460,9 @@ img { max-width: 100%; display: block; }
 
 .contact-hero h1 {
   font-family: var(--font-display);
-  font-weight: 450;
-  font-style: italic;
-  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: clamp(26px, 3.6vw, 38px);
   margin: 0 0 20px;
 }
 
@@ -583,13 +584,29 @@ img { max-width: 100%; display: block; }
 
 .services-hero h1 {
   font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 450;
-  font-size: clamp(34px, 4.8vw, 56px);
-  line-height: 1.13;
-  letter-spacing: -0.01em;
-  max-width: 30ch;
+  font-weight: 500;
+  font-size: clamp(28px, 3.8vw, 42px);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  max-width: 22ch;
   margin: 0 0 24px;
+}
+
+.circle-word {
+  position: relative;
+  display: inline-block;
+  color: var(--accent-2);
+  margin-right: 0.12em;
+}
+
+.circle-svg {
+  position: absolute;
+  left: -9%;
+  top: -22%;
+  width: 112%;
+  height: 150%;
+  color: var(--accent-2);
+  pointer-events: none;
 }
 
 .hero-lead {
@@ -637,9 +654,9 @@ img { max-width: 100%; display: block; }
 
 .section-head h2 {
   font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 450;
-  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-size: clamp(20px, 2.6vw, 26px);
   margin: 0 0 10px;
 }
 
@@ -685,7 +702,7 @@ img { max-width: 100%; display: block; }
 
 .tier-card.is-build .tier-kicker { color: var(--accent-2); }
 
-.tier-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 26px; margin: 0 0 10px; }
+.tier-card h3 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; font-size: 21px; margin: 0 0 10px; }
 
 .tier-tagline { color: var(--ink-60); font-size: 15px; margin: 0 0 28px; line-height: 1.5; }
 
@@ -714,7 +731,7 @@ img { max-width: 100%; display: block; }
 .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
 
 .process-step .num { font-family: var(--font-mono); font-size: 13px; color: var(--accent); margin: 0 0 14px; }
-.process-step h4 { font-family: var(--font-display); font-weight: 600; font-size: 18px; margin: 0 0 8px; }
+.process-step h4 { font-family: var(--font-display); font-weight: 500; font-size: 16px; margin: 0 0 8px; }
 .process-step p { font-size: 14px; color: var(--ink-60); line-height: 1.55; margin: 0; }
 
 .proof { padding: 72px 0; border-bottom: 1px solid var(--line); }
@@ -784,8 +801,9 @@ img { max-width: 100%; display: block; }
 
 .project-hero h1 {
   font-family: var(--font-display);
-  font-weight: 450;
-  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: clamp(25px, 3.6vw, 38px);
   margin: 0 0 18px;
 }
 
@@ -969,9 +987,9 @@ img { max-width: 100%; display: block; }
 
 .project-block-title {
   font-family: var(--font-display);
-  font-weight: 450;
-  font-style: italic;
-  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-size: clamp(20px, 2.6vw, 26px);
   margin: 0 0 32px;
 }
 
@@ -1066,8 +1084,8 @@ img { max-width: 100%; display: block; }
 
 .project-subblock-title {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 19px;
+  font-weight: 500;
+  font-size: 17px;
   margin: 0 0 10px;
 }
 
