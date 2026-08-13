@@ -32,7 +32,7 @@
 <header class="services-hero">
   <div class="wrap">
     <p class="hero-eyebrow">For founders &amp; teams</p>
-    <h1>Custom marketing solutions. Real <span class="circle-word">results</span>.</h1>
+    <h1>Customized marketing solutions. Real <span class="circle-word" id="typed-results">results</span><span class="type-cursor is-done" id="typed-cursor" aria-hidden="true">|</span>.</h1>
     <p class="hero-lead">Your business isn't generic. Your marketing strategy shouldn't be either.</p>
     <p class="sub">Every hard-working business deserves a strategy that truly understands them and cuts through the noise.</p>
     <div class="hero-ctas">
@@ -104,22 +104,22 @@
     </div>
     <div class="process-grid">
       <div class="process-step">
-        <p class="num">01</p>
+        <div class="process-num">01</div>
         <h4>Discovery call</h4>
         <p>30 minutes, no pitch. We figure out if this is a strategy problem or a build problem.</p>
       </div>
       <div class="process-step">
-        <p class="num">02</p>
+        <div class="process-num">02</div>
         <h4>Scope &amp; quote</h4>
         <p>A plain-language proposal — what I'll do, what it costs, how long it takes.</p>
       </div>
       <div class="process-step">
-        <p class="num">03</p>
+        <div class="process-num">03</div>
         <h4>The work</h4>
         <p>Strategy sessions or production, with regular check-ins along the way.</p>
       </div>
       <div class="process-step">
-        <p class="num">04</p>
+        <div class="process-num">04</div>
         <h4>Handoff</h4>
         <p>Final files and documentation — everything you need to continue running operations.</p>
       </div>
@@ -206,6 +206,35 @@
     alert("This form isn't wired up to send messages yet. Connect it to a service like Formspree or Netlify Forms, or swap it for a mailto link.");
     return false;
   }
+</script>
+
+<script>
+  (function () {
+    var word = "results";
+    var typedEl = document.getElementById('typed-results');
+    var cursorEl = document.getElementById('typed-cursor');
+    if (!typedEl || !cursorEl) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    var TYPE_SPEED = 65;
+    typedEl.textContent = '';
+    cursorEl.classList.remove('is-done');
+
+    var i = 0;
+    function tick() {
+      i++;
+      typedEl.textContent = word.slice(0, i);
+      if (i < word.length) {
+        setTimeout(tick, TYPE_SPEED);
+      } else {
+        cursorEl.classList.add('is-done');
+      }
+    }
+    tick();
+  })();
 </script>
 
 </body>

@@ -600,6 +600,19 @@ img { max-width: 100%; display: block; }
   text-underline-offset: 6px;
 }
 
+.type-cursor {
+  display: inline-block;
+  color: var(--accent-2);
+  text-decoration: none;
+  animation: blink 0.9s step-end infinite;
+}
+
+.type-cursor.is-done { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .type-cursor { animation: none; }
+}
+
 .hero-lead {
   max-width: 46ch;
   font-family: var(--font-body);
@@ -719,9 +732,43 @@ img { max-width: 100%; display: block; }
 
 .process { padding: 72px 0; border-bottom: 1px solid var(--line); }
 
-.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 
-.process-step .num { font-family: var(--font-mono); font-size: 13px; color: var(--accent); margin: 0 0 14px; }
+.process-step {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 24px 22px;
+  transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(20, 18, 15, 0.12);
+  border-color: var(--accent);
+}
+
+.process-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--paper);
+  border: 2px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-60);
+  margin: 0 0 16px;
+  transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.process-step:hover .process-num {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--paper);
+}
+
 .process-step h4 { font-family: var(--font-display); font-weight: 500; font-size: 16px; margin: 0 0 8px; }
 .process-step p { font-size: 14px; color: var(--ink-60); line-height: 1.55; margin: 0; }
 
@@ -1165,6 +1212,8 @@ img { max-width: 100%; display: block; }
   .card-media img, .card-link::after { transition: none; }
   .tier-card, .tier-card .btn-arrow { transition: none; }
   .tier-card:hover { transform: none; }
+  .process-step, .process-num { transition: none; }
+  .process-step:hover { transform: none; }
 }
 
 /* Visible keyboard focus */
