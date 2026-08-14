@@ -222,6 +222,8 @@ img { max-width: 100%; display: block; }
   margin: 0;
 }
 
+.hero .hero-ctas { margin-top: 32px; }
+
 .hero-animated {
   font-family: var(--font-display);
   font-weight: 500;
