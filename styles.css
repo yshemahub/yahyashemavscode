@@ -540,8 +540,8 @@ img { max-width: 100%; display: block; }
   margin-top: 8px;
   align-self: flex-start;
   border: 1px solid var(--ink);
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-mono);
   font-size: 12.5px;
   letter-spacing: 0.06em;
@@ -549,10 +549,10 @@ img { max-width: 100%; display: block; }
   padding: 12px 26px;
   border-radius: 999px;
   cursor: pointer;
-  transition: opacity 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-.contact-form button:hover { opacity: 0.85; }
+.contact-form button:hover { background: var(--ink); color: var(--paper); }
 
 .contact-form .form-row {
   display: grid;
@@ -576,10 +576,10 @@ img { max-width: 100%; display: block; }
   transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
 }
 
-.btn-solid { background: var(--ink); color: var(--paper); }
-.btn-solid:hover { opacity: 0.85; }
+.btn-solid { background: var(--paper); color: var(--ink); }
+.btn-solid:hover { background: var(--ink); color: var(--paper); }
 
-.btn-outline { background: transparent; color: var(--ink); }
+.btn-outline { background: var(--paper); color: var(--ink); }
 .btn-outline:hover { background: var(--ink); color: var(--paper); }
 
 .services-hero { padding: 88px 0 64px; border-bottom: 1px solid var(--line); }
@@ -887,8 +887,8 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 8px;
   border: 1px solid var(--ink);
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-mono);
   font-size: 12.5px;
   letter-spacing: 0.06em;
@@ -896,10 +896,10 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
   padding: 12px 26px;
   border-radius: 999px;
-  transition: opacity 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-.project-cta:hover { opacity: 0.85; }
+.project-cta:hover { background: var(--ink); color: var(--paper); }
 
 .media-placeholder img,
 .media-placeholder video {
