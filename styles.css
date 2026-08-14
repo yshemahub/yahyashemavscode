@@ -554,6 +554,15 @@ img { max-width: 100%; display: block; }
 
 .contact-form button:hover { background: var(--ink); color: var(--paper); }
 
+.form-success {
+  font-size: 16px;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 24px;
+  margin: 0;
+}
+
 .contact-form .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

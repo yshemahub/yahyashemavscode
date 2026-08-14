@@ -156,35 +156,42 @@
       </ul>
     </div>
 
-    <form class="contact-form" onsubmit="return handleSubmit(event)">
+    <form class="contact-form" id="quote-form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSdt5p1BlQnbpjhag-dxVO5xgoXcU3Dyo1Rx1QqUgr63098f8g/formResponse"
+          method="POST" target="hidden_iframe" onsubmit="handleSubmit(event)">
       <div class="form-row">
         <div>
           <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Manzi Josh" required>
+          <input id="name" name="entry.74555228" type="text" placeholder="Manzi Josh" required>
         </div>
         <div>
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="manzi.josh@gmail.com" required>
+          <input id="email" name="entry.278512208" type="email" placeholder="manzi.josh@gmail.com" required>
         </div>
       </div>
       <div>
         <label for="company">Company <span style="text-transform:none;">(optional)</span></label>
-        <input id="company" name="company" type="text" placeholder="Company name">
+        <input id="company" name="entry.1110105190" type="text" placeholder="Company name">
       </div>
       <div>
         <label for="interest">Interested in</label>
-        <select id="interest" name="interest">
+        <select id="interest" name="entry.35492724">
           <option>Marketing Consulting</option>
           <option>Full Project</option>
           <option>Not sure yet</option>
+          <option>Other</option>
         </select>
       </div>
       <div>
         <label for="message">Tell me about it</label>
-        <textarea id="message" name="message" rows="4" placeholder="What are you trying to solve?" required></textarea>
+        <textarea id="message" name="entry.880522548" rows="4" placeholder="What are you trying to solve?" required></textarea>
       </div>
       <button type="submit">Send</button>
     </form>
+
+    <p class="form-success" id="form-success" hidden>Thanks &mdash; your message is in. I reply within 1&ndash;3 business days.</p>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="form submission target"></iframe>
   </div>
 </section>
 
@@ -200,11 +207,20 @@
 <script src="assets/js/nav-dropdown.js"></script>
 
 <script>
-  // Placeholder handler — replace with Formspree, Netlify Forms, or a mailto fallback.
+  // Submits to a Google Form's formResponse endpoint via a hidden iframe
+  // (Google doesn't allow reading the response directly, so we can't
+  // confirm success beyond "the iframe finished loading").
+  var quoteFormSubmitted = false;
+
+  document.getElementById('hidden_iframe').addEventListener('load', function () {
+    if (!quoteFormSubmitted) return;
+    document.getElementById('quote-form').hidden = true;
+    document.getElementById('form-success').hidden = false;
+  });
+
   function handleSubmit(e) {
-    e.preventDefault();
-    alert("This form isn't wired up to send messages yet. Connect it to a service like Formspree or Netlify Forms, or swap it for a mailto link.");
-    return false;
+    quoteFormSubmitted = true;
+    // no preventDefault — let the browser POST normally into the hidden iframe
   }
 </script>
 
